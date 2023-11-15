@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeldCSharp", "GeldCSharp\GeldCSharp.csproj", "{7A62EF4B-E4EE-4190-B091-B35AC8A43735}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geld.Core", "Geld.Core\Geld.Core.csproj", "{05B346FD-2A76-432E-9441-0FDDF6A2822A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A62EF4B-E4EE-4190-B091-B35AC8A43735}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A62EF4B-E4EE-4190-B091-B35AC8A43735}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A62EF4B-E4EE-4190-B091-B35AC8A43735}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A62EF4B-E4EE-4190-B091-B35AC8A43735}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05B346FD-2A76-432E-9441-0FDDF6A2822A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05B346FD-2A76-432E-9441-0FDDF6A2822A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05B346FD-2A76-432E-9441-0FDDF6A2822A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05B346FD-2A76-432E-9441-0FDDF6A2822A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5BA9B7CD-C62C-4533-B922-A9B3B7CC6714}
+	EndGlobalSection
+EndGlobal
