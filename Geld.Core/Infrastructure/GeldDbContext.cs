@@ -1,5 +1,6 @@
 ﻿using Geld.Core.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace Geld.Core.Infrastructure
 {
@@ -13,14 +14,5 @@ namespace Geld.Core.Infrastructure
         public GeldDbContext() { }
 
         public GeldDbContext(DbContextOptions<GeldDbContext> options) : base(options) { }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-                string connString = "Host=motty.db.elephantsql.com;Database=edpibvhc;Username=edpibvhc;Password=1f5CcGg35PKpQRUXsLQjPmdWs10KPRKn";
-                optionsBuilder.UseNpgsql(connString);
-            }
-        }
     }
 }
