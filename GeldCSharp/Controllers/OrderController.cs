@@ -10,10 +10,14 @@ namespace GeldCSharp.Controllers
     {
 
         private readonly IOrderService _orderService;
+        private readonly IBillingService _billingService;
+        private readonly IInstallmentService _installmentService;
 
-        public OrderController(IOrderService orderService)
+        public OrderController(IOrderService orderService, IBillingService billingService, IInstallmentService installmentService)
         {
             _orderService = orderService;
+            _billingService = billingService;
+            _installmentService = installmentService;
         }
 
         [HttpGet]
@@ -27,6 +31,8 @@ namespace GeldCSharp.Controllers
         public IActionResult Create([FromBody] Order order)
         {
             _orderService.Add(order);
+            var billings = _billingService.UpdateMonthlyBillings(order);
+            _installmentService.CreateInstallmentsForOrder(order, billings);
             return CreatedAtAction(nameof(Get), new { id = order.Id}, order);
         }
     }
