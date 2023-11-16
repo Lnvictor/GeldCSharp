@@ -3,13 +3,20 @@ using Geld.Core.Repositories;
 using Geld.Core.Repositories.Abstract;
 using Geld.Core.Services;
 using Geld.Core.Services.Abstract;
+using Microsoft.EntityFrameworkCore;
+
+AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 builder.Services.AddScoped<IOrderService, OrderService>();
-builder.Services.AddDbContext<GeldDbContext>();
+builder.Services.AddScoped<IBillingRepository, BillingRepository>();
+builder.Services.AddScoped<IBillingService, BillingService>();
+builder.Services.AddScoped<IInstallmentRepository, InstallmentRepository>();
+builder.Services.AddScoped<IInstallmentService, InstallmentService>();
+builder.Services.AddDbContext<GeldDbContext>(options => { options.UseNpgsql(builder.Configuration.GetConnectionString("bd-cs")); });
 
 
 builder.Services.AddControllers();
