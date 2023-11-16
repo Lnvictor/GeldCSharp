@@ -13,7 +13,7 @@ namespace Geld.Core.Entities
         public int Month { get; set; }
         public int Year { get; set; }
         public DateTime Expiration { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
     }
 }

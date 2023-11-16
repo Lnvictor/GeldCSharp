@@ -11,7 +11,7 @@ namespace Geld.Core.Entities
         public int Id { get; set; }
         public Decimal Value { get; set; }
         public int InstallmentsNumber { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
     }
 }
