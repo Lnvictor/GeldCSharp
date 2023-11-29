@@ -11,7 +11,7 @@ public class EntityBaseRepository<T> : IEntityBaseRepository<T>
                 where T : class, IEntityBase, new()
 {
 
-    private GeldDbContext _context;
+    protected readonly GeldDbContext _context;
 
     #region Properties
     public EntityBaseRepository(GeldDbContext context)
