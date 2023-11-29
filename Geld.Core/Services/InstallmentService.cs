@@ -33,7 +33,7 @@ namespace Geld.Core.Services
 
         public List<Installment> GetInstallmentsByBillings(int id)
         {
-            var Installments = _repository.FindBy(x => x.Billing.Id == id);
+            var Installments = _repository.FindByBilling(id);
             return Installments.ToList();
         }
     }
