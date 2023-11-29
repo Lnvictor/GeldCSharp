@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Geld.Core.Entities
 {
-    public class Payment: IEntityBase
+    public class Payment : IEntityBase
     {
         [Key, Column(Order = 0)]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
